@@ -13,43 +13,48 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>User Data</title>
     
     <style>
-  body {
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
-    background-color: rgb(150, 233, 242);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+    body {
+        background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+        background-color: #003366;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
 
-  h1 {
-    text-align: center;
-    color: #333;
-    padding: 10px;
-  }
+    h1 {
+        text-align: center;
+        color: #fff;
+        padding: 10px;
+        font-size: 24px;
+    }
 
-  table {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: auto;
-    width: 80%; 
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(90deg, rgb(141, 122, 128) 0%, rgb(139, 102, 241) 100%); 
-    border: 1px solid #ccc;
-    border-collapse: collapse;
-  }
+    table {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(90deg, #4a90e2 0%, #6f72ca 100%);
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        border-radius: 10px;
+    }
 
-  th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    background-color: transparent; 
-    color: #333; 
-  }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 15px;
+        text-align: center;
+        background-color: #f2f2f2;
+        color: #333;
+    }
 
-  th {
-    background-color: #333;
-    color: white;
-  }
+    th {
+        background-color: #333;
+        color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e6e6e6;
+    }
 </style>
-
 
 </head>
 <body>
