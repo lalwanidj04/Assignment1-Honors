@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $gender = $_POST['gender'];
     $email = $_POST['email'];
     $city = $_POST['city'];
-    $query = "INSERT INTO users (name, email, gender, city) VALUES (?, ?, ?, ?)";
+    $query = "INSERT INTO customer (name, email, gender, city) VALUES (?, ?, ?, ?)";
     $statement = $pdo->prepare($query);
     if ($statement->execute([$name, $email, $gender, $city])) {
         echo 'Data Entered Successfully';
