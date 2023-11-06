@@ -1,7 +1,7 @@
 <?php
 require 'database/DBConnection.php';
 $pdo = DbConnection::make();
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM customer";
 $stmt = $pdo->query($query);
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
