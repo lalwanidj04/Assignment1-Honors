@@ -1,3 +1,21 @@
+<?php
+require 'database/DBConnection.php';
+$pdo = DBConnection::make();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];
+    $city = $_POST['city'];
+    $query = "INSERT INTO users (name, email, gender, city) VALUES (?, ?, ?, ?)";
+    $statement = $pdo->prepare($query);
+    if ($statement->execute([$name, $email, $gender, $city])) {
+        echo 'Data Entered Successfully';
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
